@@ -606,7 +606,7 @@ fbq('track','PageView');
 <!-- ================= HERO ================= -->
 <header class="hero" id="hero">
   <div class="siren b"></div><div class="siren r"></div>
-  <div class="hero-img" id="heroImg"><picture><source media="(max-width:900px)" srcset="img/hero-mobile.webp" width="720" height="741"><img src="img/hero-desktop.webp" onerror="this.onerror=null;var p=this.parentNode.querySelector('source');if(p)p.srcset='https://angradosreis.institutosouto.com.br/img/hero-mobile.webp';this.src='https://angradosreis.institutosouto.com.br/img/hero-desktop.webp'" alt="Prof. Ismael Souto" width="1920" height="849" fetchpriority="high" decoding="async"></picture><img class="gcm-logo" id="gcmLogo" src="img/logo-pmerj.png" alt="Distintivo da Polícia Militar do Estado do Rio de Janeiro"></div>
+  <div class="hero-img" id="heroImg"><picture><source media="(max-width:900px)" srcset="img/hero-mobile.webp" width="720" height="741"><img src="img/hero-desktop.webp" alt="Prof. Ismael Souto" width="1920" height="849" fetchpriority="high" decoding="async"></picture></div>
 
   <div class="wrap">
     <div class="hero-txt">
@@ -1122,21 +1122,7 @@ const onScroll=()=>{
 addEventListener("scroll",()=>{ if(!ticking){ticking=true;requestAnimationFrame(onScroll)} },{passive:true});
 addEventListener("resize",onScroll); onScroll();
 
-/* distintivo PMERJ flutuando sobre o ombro (coordenadas na foto original 2560x1132) */
-const placeLogo=()=>{
-  const box=$("#heroImg"), photo=box.querySelector("img"), logo=$("#gcmLogo");
-  const mob=matchMedia("(max-width:900px)").matches;
-  /* foto mobile = recorte x1180..2280 da original, reduzido p/ 720px */
-  const W=mob?720:2560, H=mob?741:1132, k=mob?720/1100:1, x0=mob?1180:0;
-  const bw=box.clientWidth, bh=photo.clientHeight||box.clientHeight;
-  const cs=getComputedStyle(photo).objectPosition.split(" ").map(v=>parseFloat(v)/100);
-  const sc=Math.max(bw/W,bh/H), ox=(bw-W*sc)*cs[0], oy=(bh-H*sc)*cs[1];
-  const ax=(1965-x0)*k*sc+ox, ay=555*k*sc+oy;               /* ombro */
-  const lw=logo.offsetWidth, lh=logo.offsetHeight||lw*1.375;
-  logo.style.left=(ax-lw/2)+"px"; logo.style.top=(ay-lh)+"px"; logo.classList.add("on");
-};
-$("#gcmLogo").addEventListener("load",placeLogo); $("#heroImg img").addEventListener("load",placeLogo);
-addEventListener("resize",placeLogo); setTimeout(placeLogo,300);
+
 
 /* Meta Pixel: eventos de clique */
 $$('a[href*="pay.hub.la"]').forEach(a=>a.addEventListener('click',()=>px('InitiateCheckout')));
