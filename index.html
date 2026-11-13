@@ -11,11 +11,9 @@
 <link rel="dns-prefetch" href="https://connect.facebook.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional" rel="stylesheet"></noscript>
-<link rel="preload" as="image" href="https://angradosreis.institutosouto.com.br/img/hero-mobile.webp" media="(max-width:900px)" fetchpriority="high">
-<link rel="preload" as="image" href="https://angradosreis.institutosouto.com.br/img/hero-desktop.webp" media="(min-width:901px)" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional" rel="stylesheet">
+<link rel="preload" as="image" href="img/hero-mobile.webp" media="(max-width:900px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-desktop.webp" media="(min-width:901px)" fetchpriority="high">
 <link rel="icon" type="image/png" href="img/logo-pmerj.png">
 <style>
 @font-face{font-family:"Jakarta Fallback";src:local("Arial"),local("Helvetica Neue"),local("Roboto");size-adjust:104%;ascent-override:98%;descent-override:21%;line-gap-override:0%}
@@ -603,7 +601,7 @@ fbq('track','PageView');
 <!-- ================= HERO ================= -->
 <header class="hero" id="hero">
   <div class="siren b"></div><div class="siren r"></div>
-  <div class="hero-img" id="heroImg"><picture><source media="(max-width:900px)" srcset="https://angradosreis.institutosouto.com.br/img/hero-mobile.webp" width="720" height="741"><img src="https://angradosreis.institutosouto.com.br/img/hero-desktop.webp" alt="Prof. Ismael Souto" width="1920" height="849" fetchpriority="high" decoding="async"></picture><img class="gcm-logo" id="gcmLogo" src="img/logo-pmerj.png" alt="Distintivo da Polícia Militar do Estado do Rio de Janeiro"></div>
+  <div class="hero-img" id="heroImg"><picture><source media="(max-width:900px)" srcset="img/hero-mobile.webp" width="720" height="741"><img src="img/hero-desktop.webp" onerror="this.onerror=null;var p=this.parentNode.querySelector('source');if(p)p.srcset='https://angradosreis.institutosouto.com.br/img/hero-mobile.webp';this.src='https://angradosreis.institutosouto.com.br/img/hero-desktop.webp'" alt="Prof. Ismael Souto" width="1920" height="849" fetchpriority="high" decoding="async"></picture><img class="gcm-logo" id="gcmLogo" src="img/logo-pmerj.png" alt="Distintivo da Polícia Militar do Estado do Rio de Janeiro"></div>
 
   <div class="wrap">
     <div class="hero-txt">
