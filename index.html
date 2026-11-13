@@ -6,6 +6,9 @@
 <title>Preparatório PMERJ | Instituto Souto</title>
 <meta name="description" content="Último concurso da PMERJ com nível médio, sem limite de idade e R$ 7.644,60. Prepare-se no padrão FGV estudando 2 horas por dia com o Prof. Ismael Souto.">
 <meta name="theme-color" content="#000000">
+<link rel="preconnect" href="https://angradosreis.institutosouto.com.br">
+<link rel="preconnect" href="https://institutosouto.com.br">
+<link rel="dns-prefetch" href="https://connect.facebook.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
@@ -453,6 +456,35 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .dline .di svg{height:15px}.pill i svg{height:13px}.pitem .ck svg{height:13px}
 .fcard::before{opacity:.6}
 
+/* ---------- DEPOIMENTOS EM VÍDEO ---------- */
+.depo{background:radial-gradient(900px 500px at 50% 0%,rgba(255,74,38,.16),transparent 60%),#000}
+.depo .head{max-width:760px;margin:0 auto 46px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.vcard{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#0b0c12;border:1px solid var(--line);cursor:pointer;transition:transform .35s,border-color .35s;box-shadow:0 30px 60px -30px rgba(0,0,0,.8)}
+.vcard:hover{transform:translateY(-6px);border-color:rgba(255,162,31,.45)}
+.vcard img,.vcard video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vcard img{color:transparent;font-size:0}
+.vcard video{object-fit:contain;background:#000}
+.vcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.85));pointer-events:none;transition:opacity .3s}
+.vcard .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:66px;height:66px;border-radius:50%;background:var(--grad-btn);display:grid;place-items:center;color:#1a0700;z-index:2;box-shadow:0 0 0 8px rgba(255,162,31,.18),0 16px 34px -8px rgba(255,74,38,.7);transition:transform .3s}
+.vcard:hover .play{transform:translate(-50%,-50%) scale(1.08)}
+.vcard .play svg{width:24px;height:24px;margin-left:3px}
+.vcard .vlab{position:absolute;left:14px;bottom:14px;right:14px;z-index:2;font-size:13px;color:#d3d5dc}
+.vcard .vlab b{display:block;color:#fff;font-size:15px}
+.vcard.on{cursor:default}
+.vcard.on .play,.vcard.on .vlab,.vcard.on::after,.vcard.on img{display:none}
+.vnote{display:flex;justify-content:center;gap:28px;margin-top:26px;font-size:14px;color:var(--gray);flex-wrap:wrap}
+.vnote span{display:inline-flex;align-items:center;gap:8px}
+.vnote b{color:#fff}
+.vnote svg{width:17px;height:17px;color:var(--gold)}
+@media (max-width:900px){.vgrid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.vgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:0 20px 8px;margin:0 -20px;scrollbar-width:none}.vgrid::-webkit-scrollbar{display:none}.vcard{flex:0 0 72%;scroll-snap-align:center}}
+
+/* ---------- performance ---------- */
+.lazy-sec{content-visibility:auto;contain-intrinsic-size:auto 1100px}
+.ap img,.plat-bg img{background:#16171f}
+.paused .track,.paused .row,.paused .mt{animation-play-state:paused}
+
 /* ---------- responsive ---------- */
 @media (max-width:1080px){
   .fcards{grid-template-columns:repeat(3,1fr)}
@@ -667,13 +699,27 @@ fbq('track','PageView');
   </div>
 </section>
 
+<!-- ================= DEPOIMENTOS ================= -->
+<section class="depo pad notch" id="depoimentos" style="--prev:#fff">
+  <div class="wrap center head">
+    <span class="eyebrow rv">// depoimentos</span>
+    <h2 class="rv d1">Quem estudou com o método <b class="g">conta como foi</b></h2>
+    <p class="lead rv d2" style="margin-top:16px">Alunos do Prof. Ismael Souto contando, com as próprias palavras, como foi a preparação até a aprovação.</p>
+  </div>
+  <div class="wrap">
+    <div class="vgrid" id="vgrid"></div>
+    <div class="vnote rv"><span><svg><use href="#i-trophy"/></svg><b>+4.000</b> alunos aprovados</span><span><svg><use href="#i-play"/></svg>Toque para assistir com som</span></div>
+    <div class="center" style="margin-top:40px"><div class="cta-row rv"><a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero ser o próximo depoimento</a></div></div>
+  </div>
+</section>
+
 <!-- ================= PLATAFORMA ================= -->
-<section class="plat notch" id="plataforma" style="--prev:#fff">
+<section class="plat notch" id="plataforma" style="--prev:#000">
   <div class="plat-stage">
     <div class="plat-bg" id="platBg"></div>
     <div class="stage rv">
       <div class="laptop">
-        <div class="screen"><video class="lv" data-src="img/videos/01.mp4" muted loop playsinline preload="none" aria-label="Tour pela plataforma do Instituto Souto"></video></div>
+        <div class="screen"><video class="lv" data-src="img/videos/01.mp4" poster="img/videos/01.webp" width="560" height="336" muted loop playsinline preload="none" aria-label="Tour pela plataforma do Instituto Souto"></video></div>
         <div class="base"></div>
       </div>
       <div class="rock"><img src="https://angradosreis.institutosouto.com.br/img/pedra.webp" alt="" loading="lazy"></div>
@@ -837,7 +883,7 @@ fbq('track','PageView');
 </section>
 
 <!-- ================= SOBRE ================= -->
-<section class="about pad notch" style="--prev:var(--paper)">
+<section class="about pad notch lazy-sec" style="--prev:var(--paper)">
   <div class="wrap agrid">
     <div class="aphoto rv">
       <img src="https://angradosreis.institutosouto.com.br/img/prof-ismael.webp" alt="Prof. Ismael Souto" loading="lazy">
@@ -865,7 +911,7 @@ fbq('track','PageView');
 </section>
 
 <!-- ================= FAQ ================= -->
-<section class="light pad notch" style="--prev:#000">
+<section class="light pad notch lazy-sec" style="--prev:#000">
   <div class="wrap fgrid">
     <div class="fside">
       <span class="eyebrow rv">// tire suas dúvidas</span>
@@ -938,6 +984,15 @@ const APROVADOS_GM = Array.from({length:24},(_,i)=>`https://institutosouto.com.b
 /* intercala: 3 da GM, 1 da PM */
 const APROVADOS = []; { let p=0; APROVADOS_GM.forEach((g,i)=>{ APROVADOS.push(g); if(i%3===2 && p<APROVADOS_PM.length) APROVADOS.push(APROVADOS_PM[p++]); }); }
 
+/* Depoimentos em vídeo (hospedados no WordPress do Instituto Souto) */
+const WP = "https://institutosouto.com.br/wp-content";
+const DEPOIMENTOS = [
+  {v:`${WP}/uploads/2025/11/videoplayback.mp4`,   p:`${WP}/webp-express/webp-images/uploads/2025/11/Screenshot-2025-11-14-143043.png.webp`, n:"Depoimento 01"},
+  {v:`${WP}/uploads/2025/11/videoplayback-1.mp4`, p:`${WP}/webp-express/webp-images/uploads/2025/11/Screenshot-2025-11-14-143141.png.webp`, n:"Depoimento 02"},
+  {v:`${WP}/uploads/2025/11/videoplayback-2.mp4`, p:`${WP}/webp-express/webp-images/uploads/2025/11/Screenshot-2025-11-14-143214.png.webp`, n:"Depoimento 03"},
+  {v:`${WP}/uploads/2025/11/videoplayback-3.mp4`, p:`${WP}/webp-express/webp-images/uploads/2025/11/Screenshot-2025-11-14-143244.png.webp`, n:"Depoimento 04"}
+];
+
 /* Demonstrações da plataforma (img/videos) */
 const GIFS = [
   {f:"02.mp4", tag:"Planejamento", t:"Plano de Estudos", d:"Escolha seu modo de estudo e receba um cronograma personalizado de acordo com o seu tempo, nível e objetivos."},
@@ -972,18 +1027,37 @@ const TOASTS = [
 
 /* ===== RENDER ===== */
 const $ = s=>document.querySelector(s), $$ = s=>[...document.querySelectorAll(s)];
+const px=(ev)=>{ try{ if(window.fbq) fbq('track',ev); }catch(e){} };
 const waURL = `https://wa.me/${WHATS}?text=${encodeURIComponent(WA_MSG)}`;
 $$(".js-wa").forEach(a=>{a.href=waURL;a.target="_blank";a.rel="noopener"});
 
-$("#aprTrack").innerHTML = [...APROVADOS,...APROVADOS].map(src=>`<div class="ap"><img src="${src}" alt="Aluno aprovado com o Prof. Ismael Souto" loading="lazy"><span>Aprovado</span></div>`).join("");
-const row = arr=>[...arr.slice(0,14),...arr.slice(0,14)].map(s=>`<img src="${s}" alt="" loading="lazy">`).join("");
+$("#aprTrack").innerHTML = [...APROVADOS,...APROVADOS].map(src=>`<div class="ap"><img src="${src}" alt="Aluno aprovado com o Prof. Ismael Souto" loading="lazy" decoding="async" width="230" height="307"><span>Aprovado</span></div>`).join("");
+const row = arr=>[...arr.slice(0,14),...arr.slice(0,14)].map(s=>`<img src="${s}" alt="" loading="lazy" decoding="async" width="220" height="280">`).join("");
 $("#platBg").innerHTML = `<div class="row">${row(APROVADOS)}</div><div class="row rev">${row([...APROVADOS].reverse())}</div>`;
 
 $("#gcards").innerHTML = GIFS.map((g,i)=>`
   <article class="gcard rv ${i%2?'d1':''} ${g.wide?'wide':''}">
-    <div class="gmedia"><video class="lv" data-src="img/videos/${g.f}" muted loop playsinline preload="none" aria-label="${g.t}"></video><span class="live">DEMONSTRAÇÃO</span></div>
+    <div class="gmedia"><video class="lv" data-src="img/videos/${g.f}" poster="img/videos/${g.f.replace('.mp4','.webp')}" width="560" height="336" muted loop playsinline preload="none" aria-label="${g.t}"></video><span class="live">DEMONSTRAÇÃO</span></div>
     <div class="gbody"><div class="gmeta"><span>${g.tag}</span><span>${String(i+1).padStart(2,"0")} / ${String(GIFS.length).padStart(2,"0")}</span></div><h3>${g.t}</h3><p>${g.d}</p></div>
   </article>`).join("");
+
+$("#vgrid").innerHTML = DEPOIMENTOS.map((d,i)=>`
+  <div class="vcard rv ${i?'d'+i:''}" data-v="${d.v}" role="button" tabindex="0" aria-label="Assistir ${d.n}">
+    <img src="${d.p}" alt="${d.n} de aluno aprovado" loading="lazy" decoding="async">
+    <span class="play"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg></span>
+    <span class="vlab"><b>Aluno aprovado</b>Assista ao depoimento</span>
+  </div>`).join("");
+/* só baixa o vídeo no clique; toca um por vez */
+const openDepo = c=>{
+  if(c.classList.contains("on")) return;
+  $$(".vcard video").forEach(v=>v.pause());
+  const v=document.createElement("video");
+  v.src=c.dataset.v; v.controls=true; v.playsInline=true; v.preload="auto"; v.setAttribute("controlslist","nodownload");
+  v.addEventListener("play",()=>$$(".vcard video").forEach(o=>{ if(o!==v) o.pause(); }));
+  c.appendChild(v); c.classList.add("on"); v.play().catch(()=>{});
+  px('ViewContent');
+};
+$$(".vcard").forEach(c=>{ c.addEventListener("click",()=>openDepo(c)); c.addEventListener("keydown",e=>{ if(e.key==="Enter"||e.key===" "){e.preventDefault();openDepo(c);} }); });
 
 $("#tl").insertAdjacentHTML("beforeend", STEPS.map((s,i)=>`
   <div class="st rv"><div class="num"><small>ETAPA</small>${String(i+1).padStart(2,"0")}</div><div class="box"><h3>${s[0]}</h3><p>${s[1]}</p></div></div>`).join(""));
@@ -1061,13 +1135,19 @@ $("#gcmLogo").addEventListener("load",placeLogo); $("#heroImg img").addEventList
 addEventListener("resize",placeLogo); setTimeout(placeLogo,300);
 
 /* Meta Pixel: eventos de clique */
-const px=(ev)=>{ try{ if(window.fbq) fbq('track',ev); }catch(e){} };
 $$('a[href*="pay.hub.la"]').forEach(a=>a.addEventListener('click',()=>px('InitiateCheckout')));
 $$('.js-wa').forEach(a=>a.addEventListener('click',()=>px('Contact')));
+
+/* economiza CPU/bateria com a aba em segundo plano */
+document.addEventListener("visibilitychange",()=>{ document.body.classList.toggle("paused",document.hidden); if(document.hidden) $$("video").forEach(v=>v.pause()); });
+
+/* repassa UTMs/parâmetros da URL para o checkout da Hubla */
+if(location.search){ $$('a[href*="hub.la"],a[href*="pay.hubla.app"]').forEach(a=>{ a.href += (a.href.includes("?")?"&":"?") + location.search.slice(1); }); }
 
 /* toasts */
 const tbox=$("#toasts"); let ti=0;
 const showToast=()=>{
+  if(document.hidden) return;
   const [ic,txt]=TOASTS[ti++%TOASTS.length];
   tbox.innerHTML=`<div class="toast"><i>${ic}</i><span>${txt}</span></div>`;
   const t=tbox.firstChild; requestAnimationFrame(()=>requestAnimationFrame(()=>t.classList.add("show")));
