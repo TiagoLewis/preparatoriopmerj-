@@ -11,20 +11,21 @@
 <link rel="dns-prefetch" href="https://connect.facebook.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@700&display=optional" rel="stylesheet"></noscript>
 <link rel="preload" as="image" href="https://angradosreis.institutosouto.com.br/img/hero-mobile.webp" media="(max-width:900px)" fetchpriority="high">
 <link rel="preload" as="image" href="https://angradosreis.institutosouto.com.br/img/hero-desktop.webp" media="(min-width:901px)" fetchpriority="high">
 <link rel="icon" type="image/png" href="img/logo-pmerj.png">
 <style>
+@font-face{font-family:"Jakarta Fallback";src:local("Arial"),local("Helvetica Neue"),local("Roboto");size-adjust:104%;ascent-override:98%;descent-override:21%;line-gap-override:0%}
 :root{
   --bg:#000;--card:#0b0c12;--card2:#11131c;--ink:#f4f4f6;--gray:#a3a6b2;--dim:#8b8f9c;--line:rgba(255,255,255,.08);
   --red:#e3161b;--red2:#ff2d3a;--gold:#ffc21a;--orange:#ffa21f;--blue:#2f7bff;--cyan:#38d6ff;
   --grad:linear-gradient(90deg,#fff3cf 0%,#ffd45a 28%,#ffa21f 52%,#ff4a26 74%,#d0101a 100%);
   --grad-btn:linear-gradient(100deg,#ffd45a 0%,#ffa21f 40%,#ff4a26 75%,#e3161b 100%);
   --paper:#f5f3ee;--paper2:#fff;--pink:#0f1016;--pmut:#5f6270;--pline:rgba(15,16,22,.09);
-  --font:"Plus Jakarta Sans","Helvetica Neue",Arial,system-ui,sans-serif;
+  --font:"Plus Jakarta Sans","Jakarta Fallback","Helvetica Neue",Arial,system-ui,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
   --r:22px;--max:1180px;color-scheme:dark;
 }
@@ -96,7 +97,7 @@ h1 .g,h2 .g{font-weight:800}
 .hero-img{position:absolute;inset:0;z-index:-2}
 .hero-img picture{display:block;width:100%;height:100%}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:78% 22%}
-.hero-img .gcm-logo{position:absolute;width:96px;height:auto;object-fit:contain;left:0;top:0;opacity:0;filter:drop-shadow(0 10px 22px rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(255,194,26,.25));transition:opacity .6s;z-index:2}
+.hero-img .gcm-logo{position:absolute;width:96px;height:auto;aspect-ratio:64/80;object-fit:contain;left:0;top:0;opacity:0;filter:drop-shadow(0 10px 22px rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(255,194,26,.25));transition:opacity .6s;z-index:2}
 .hero-img .gcm-logo.on{opacity:1;animation:logoBob 5s ease-in-out infinite}
 @keyframes logoBob{50%{translate:0 -10px}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 70%,#000 100%),linear-gradient(90deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.55) 38%,transparent 60%)}
@@ -503,7 +504,7 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
   .hero::before{display:none}
   .float.f1{bottom:auto;right:12px;top:230px}
   .float.f2{display:none}
-  .siren{width:300px;height:300px}
+  .siren{width:240px;height:240px;filter:blur(60px)}
   .focus-head,.mgrid,.ogrid,.ogrid2,.agrid,.fgrid,.fit{grid-template-columns:1fr}
   .focus-head{gap:16px}
   .fcards{grid-template-columns:1fr 1fr}
@@ -545,13 +546,12 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
-<!-- Meta Pixel -->
+<!-- Meta Pixel (carregamento adiado: não bloqueia a página) -->
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
+!function(f,b,e,v,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+var done=0,load=function(){if(done)return;done=1;var t=b.createElement(e);t.async=!0;t.src=v;b.head.appendChild(t)};
+['scroll','pointerdown','keydown','touchstart'].forEach(function(x){addEventListener(x,load,{once:!0,passive:!0})});
+addEventListener('load',function(){setTimeout(load,3500)})}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','828102750053261');
 fbq('track','PageView');
 </script>
@@ -612,7 +612,7 @@ fbq('track','PageView');
         <span>Nível Médio</span>
         <span><img src="https://angradosreis.institutosouto.com.br/img/avatar-ismael.webp" alt="">@profismaelsouto</span>
       </div>
-      <h1 class="rv d1">Conquiste sua farda na <span class="g">Polícia Militar do RJ</span> estudando apenas 2 horas por dia</h1>
+      <h1>Conquiste sua farda na <span class="g">Polícia Militar do RJ</span> estudando apenas 2 horas por dia</h1>
       <p class="sub">A FGV reprovou 90% dos candidatos no último concurso. Esta é a sua <b>última chance de entrar na PMERJ com Ensino Médio</b>: <b>sem limite de idade</b> e <b>R$ 7.644,60</b> de remuneração + benefícios. Prepare-se com o método tático de quem foi <b>aprovado para Oficial e Soldado da PM</b>.</p>
       <div class="cta-row">
         <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga na PMERJ</a>
@@ -1033,7 +1033,8 @@ $$(".js-wa").forEach(a=>{a.href=waURL;a.target="_blank";a.rel="noopener"});
 
 $("#aprTrack").innerHTML = [...APROVADOS,...APROVADOS].map(src=>`<div class="ap"><img src="${src}" alt="Aluno aprovado com o Prof. Ismael Souto" loading="lazy" decoding="async" width="230" height="307"><span>Aprovado</span></div>`).join("");
 const row = arr=>[...arr.slice(0,14),...arr.slice(0,14)].map(s=>`<img src="${s}" alt="" loading="lazy" decoding="async" width="220" height="280">`).join("");
-$("#platBg").innerHTML = `<div class="row">${row(APROVADOS)}</div><div class="row rev">${row([...APROVADOS].reverse())}</div>`;
+const idle = window.requestIdleCallback || (f=>setTimeout(f,200));
+idle(()=>{ $("#platBg").innerHTML = `<div class="row">${row(APROVADOS)}</div><div class="row rev">${row([...APROVADOS].reverse())}</div>`; });
 
 $("#gcards").innerHTML = GIFS.map((g,i)=>`
   <article class="gcard rv ${i%2?'d1':''} ${g.wide?'wide':''}">
