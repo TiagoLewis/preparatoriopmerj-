@@ -518,6 +518,32 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 @media (max-width:900px){.cmp{grid-template-columns:1fr}.cmp .arr span{transform:rotate(90deg)}.pillars{grid-template-columns:1fr}}
 @media (max-width:600px){.cmpc{padding:22px}.cmpc .row2{grid-template-columns:1fr 1fr}}
 
+/* ---------- recorte de jornal ---------- */
+.press{display:grid;grid-template-columns:.9fr 1.1fr;gap:46px;align-items:center;margin-top:60px}
+.press h3{font-size:clamp(26px,3vw,36px);letter-spacing:-.03em;line-height:1.1;margin-bottom:14px}
+.press .lead{max-width:460px}
+.press .facts{list-style:none;display:grid;gap:10px;margin-top:22px}
+.press .facts li{display:flex;gap:12px;align-items:flex-start;font-size:15px;color:#d3dbef}
+.press .facts li b{color:#fff}
+.press .facts svg{flex:none;width:18px;height:18px;color:var(--gold);margin-top:2px}
+.clip{position:relative;background:#f7f4ec;color:#1b1b1b;border-radius:4px;padding:30px 32px 26px;transform:rotate(-1.6deg);box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 2px 0 rgba(0,0,0,.08);font-family:Georgia,"Times New Roman",serif;transition:transform .4s}
+.clip:hover{transform:rotate(0) scale(1.01)}
+.clip::before{content:"";position:absolute;inset:0;border-radius:4px;background:repeating-linear-gradient(0deg,rgba(0,0,0,.018) 0 1px,transparent 1px 3px);pointer-events:none}
+.clip .tape{position:absolute;width:110px;height:30px;background:rgba(255,236,170,.75);top:-14px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.clip .tape.l{left:24px;transform:rotate(-6deg)}
+.clip .tape.r{right:24px;transform:rotate(5deg)}
+.clip .mast{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double #1b1b1b;padding-bottom:8px;margin-bottom:16px;font-family:var(--font)}
+.clip .mast b{font-size:22px;font-weight:800;letter-spacing:-.02em;text-transform:lowercase}
+.clip .mast span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a2a1a}
+.clip h4{font-size:clamp(22px,2.4vw,30px);line-height:1.15;font-weight:700;margin-bottom:12px}
+.clip .meta{font-family:var(--font);font-size:12px;color:#6b6b6b;margin-bottom:14px}
+.clip p{font-size:15.5px;line-height:1.55;color:#333}
+.clip p mark{background:linear-gradient(transparent 55%,rgba(255,208,74,.75) 55%);color:inherit;padding:0 2px}
+.clip .go{display:inline-flex;gap:8px;align-items:center;margin-top:18px;font-family:var(--font);font-weight:700;font-size:13.5px;color:#0b2a70;border-bottom:2px solid rgba(11,42,112,.25)}
+.clip .go svg{width:14px;height:14px}
+.clip .stamp{position:absolute;right:-14px;bottom:-18px;background:var(--grad-btn);color:#0a1a3a;font-family:var(--font);font-weight:800;font-size:12px;letter-spacing:.06em;padding:8px 14px;border-radius:999px;transform:rotate(4deg);box-shadow:0 10px 24px -8px rgba(242,179,32,.7)}
+@media (max-width:900px){.press{grid-template-columns:1fr;gap:34px}.clip{transform:rotate(-1deg);padding:26px 22px 22px}.clip .stamp{right:10px}}
+
 /* ---------- performance ---------- */
 .lazy-sec{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 .ap img,.plat-bg img{background:#122448}
@@ -706,6 +732,28 @@ fbq('track','PageView');
       <div class="pil rv"><span class="icn"><svg><use href="#i-trend"/></svg></span><div><h4>16 mil policiais</h4><p>A <b>maior oportunidade de ingresso</b> na PMERJ dos últimos anos, com a meta de zerar o déficit.</p></div></div>
       <div class="pil rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><h4>Último com nível médio</h4><p>Nos próximos editais, <b>o diploma de nível superior passa a ser exigido</b>. Esta é a última janela.</p></div></div>
       <div class="pil rv d2"><span class="icn"><svg><use href="#i-users"/></svg></span><div><h4>Sem limite de idade</h4><p>Tem 18, 30 ou 45 anos? <b>A oportunidade é a mesma.</b> O limite foi declarado inconstitucional pelo TJRJ.</p></div></div>
+    </div>
+
+    <div class="press">
+      <div class="rv">
+        <span class="eyebrow">// saiu na imprensa</span>
+        <h3>Sem limite de idade: <b class="g">não é promessa, é decisão da Justiça.</b></h3>
+        <p class="lead">A lei que barrava quem tinha mais de 32 anos foi derrubada pelo Tribunal de Justiça do Rio. Quem já tinha desistido da farda por causa da idade ganhou uma nova chance.</p>
+        <ul class="facts">
+          <li><svg><use href="#i-check"/></svg><span>A <b>Lei Estadual 9.546/2022</b> fixava a idade máxima em 32 anos</span></li>
+          <li><svg><use href="#i-check"/></svg><span>O <b>TJRJ declarou a lei inconstitucional</b></span></li>
+          <li><svg><use href="#i-check"/></svg><span>Vale para a <b>PMERJ e o Corpo de Bombeiros</b></span></li>
+        </ul>
+      </div>
+      <a class="clip rv d1" href="https://extra.globo.com/economia/servidor-publico/noticia/2025/10/tjrj-julga-inconstitucional-lei-que-estabelece-limite-de-idade-para-ingresso-na-pm-e-nos-bombeiros.ghtml" target="_blank" rel="noopener" aria-label="Ler a notícia completa no jornal Extra">
+        <span class="tape l"></span><span class="tape r"></span>
+        <div class="mast"><b>extra</b><span>Servidor Público</span></div>
+        <h4>TJRJ julga inconstitucional lei que estabelece limite de idade para ingresso na PM e nos Bombeiros</h4>
+        <div class="meta">Jornal Extra · outubro de 2025</div>
+        <p>O Tribunal de Justiça do Rio derrubou a <mark>Lei 9.546/2022, que limitava em 32 anos</mark> a idade para entrar na Polícia Militar e no Corpo de Bombeiros do estado.</p>
+        <span class="go">Ler a notícia completa no Extra <svg><use href="#i-arrow"/></svg></span>
+        <span class="stamp">SEM LIMITE DE IDADE</span>
+      </a>
     </div>
 
     <div class="src rv"><span>Fonte:</span><a href="https://diariodorio.com/politica/2026/10/11/douglas-ruas-anuncia-revisao-de-gastos-reforco-de-15-mil-pms-e-hospital-em-100-dias.html" target="_blank" rel="noopener" id="srcLink">veja a notícia sobre o reforço da PM</a></div>
