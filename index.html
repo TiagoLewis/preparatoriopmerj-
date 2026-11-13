@@ -484,6 +484,40 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .offer .lead{color:var(--pmut)}
 .offer .eyebrow{color:#1d4fb8}
 
+/* ---------- 16 MIL (quebra de objeções) ---------- */
+.proof{background:radial-gradient(900px 520px at 85% 10%,rgba(47,107,255,.22),transparent 60%),radial-gradient(700px 420px at 0% 100%,rgba(242,179,32,.10),transparent 60%),var(--navy);overflow:hidden}
+.proof .head{max-width:820px;margin:0 auto 50px}
+.objq{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid var(--line);border-radius:999px;padding:8px 18px 8px 10px;font-size:14.5px;color:#d3dbef;margin-bottom:22px;font-style:italic}
+.objq i{width:26px;height:26px;border-radius:50%;background:#d0101a;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:800;font-size:14px}
+.cmp{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch}
+.cmpc{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--r);padding:28px;position:relative;overflow:hidden}
+.cmpc.now{background:linear-gradient(180deg,#12285c,#0b1a40);border-color:rgba(242,179,32,.55);box-shadow:0 0 0 6px rgba(242,179,32,.07),0 40px 80px -40px rgba(242,179,32,.45)}
+.cmpc .yr{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--orange);text-transform:uppercase}
+.cmpc h3{font-size:21px;margin:6px 0 18px}
+.cmpc .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cmpc .box{background:rgba(0,0,0,.2);border:1px solid var(--line);border-radius:16px;padding:16px}
+.cmpc .box small{display:block;font-size:12.5px;color:var(--gray);margin-bottom:4px}
+.cmpc .box b{font-size:clamp(28px,3.2vw,40px);font-weight:800;letter-spacing:-.04em;line-height:1}
+.cmpc .box.hl b{color:var(--gold)}
+.cmpc .one{background:rgba(0,0,0,.2);border:1px solid rgba(242,179,32,.35);border-radius:16px;padding:18px}
+.cmpc .one small{display:block;font-size:12.5px;color:var(--gray);margin-bottom:4px}
+.cmpc .one b{font-size:clamp(46px,5.6vw,72px);font-weight:800;letter-spacing:-.05em;line-height:.95}
+.cmpc p{color:#c9d3ea;font-size:14.5px;margin-top:16px}
+.cmpc p b{color:#fff}
+.cmp .arr{display:grid;place-items:center}
+.cmp .arr span{width:56px;height:56px;border-radius:50%;background:var(--grad-btn);display:grid;place-items:center;color:#0a1a3a;box-shadow:0 12px 30px -8px rgba(242,179,32,.6)}
+.cmp .arr svg{width:24px;height:24px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.pil{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;gap:16px;align-items:flex-start}
+.pil .icn{flex:none;background:#0f2147;box-shadow:0 0 0 1px rgba(242,179,32,.4)}
+.pil h4{font-size:18px;letter-spacing:-.02em;margin-bottom:4px}
+.pil p{color:var(--gray);font-size:14.5px}
+.pil p b{color:#fff}
+.src{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--dim)}
+.src a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(242,179,32,.35)}
+@media (max-width:900px){.cmp{grid-template-columns:1fr}.cmp .arr span{transform:rotate(90deg)}.pillars{grid-template-columns:1fr}}
+@media (max-width:600px){.cmpc{padding:22px}.cmpc .row2{grid-template-columns:1fr 1fr}}
+
 /* ---------- performance ---------- */
 .lazy-sec{content-visibility:auto;contain-intrinsic-size:auto 1100px}
 .ap img,.plat-bg img{background:#122448}
@@ -641,8 +675,46 @@ fbq('track','PageView');
   </div>
 </div>
 
+<!-- ================= 16 MIL: QUEBRA DE OBJEÇÕES ================= -->
+<section class="proof pad" id="vagas16">
+  <div class="wrap center head">
+    <span class="objq rv"><i>?</i>“Concurso com 16 mil vagas? Isso não existe, professor.”</span>
+    <h2 class="rv d1">Existe sim. E o Rio <b class="g">já fez isso antes.</b></h2>
+    <p class="lead rv d2" style="margin-top:16px">Quem acha que o número é exagero não conhece o histórico da PMERJ. O edital costuma sair com um número de vagas, e a convocação vai muito além dele.</p>
+  </div>
+  <div class="wrap">
+    <div class="cmp">
+      <div class="cmpc rv">
+        <span class="yr">// Concurso de 2010</span>
+        <h3>O que já aconteceu</h3>
+        <div class="row2">
+          <div class="box"><small>Vagas no edital</small><b><span data-count="3600" data-sep="1">0</span></b></div>
+          <div class="box hl"><small>Policiais chamados</small><b>+<span data-count="13000" data-sep="1">0</span></b></div>
+        </div>
+        <p>O edital abriu <b>3.600 vagas</b> de soldado. Com as ampliações dos anos seguintes, foram chamados <b>mais de 13 mil</b>, quase 4 vezes o previsto.</p>
+      </div>
+      <div class="arr rv d1" aria-hidden="true"><span><svg><use href="#i-arrow"/></svg></span></div>
+      <div class="cmpc now rv d2">
+        <span class="yr">// Próximo concurso</span>
+        <h3>O que vem agora</h3>
+        <div class="one"><small>Meta anunciada pelo governador</small><b class="g"><span data-count="16000" data-sep="1">0</span></b><small style="margin:6px 0 0">novos policiais para zerar o déficit da PM</small></div>
+        <p>O governador eleito <b>Douglas Ruas</b> anunciou a recomposição do efetivo da PMERJ. Se em 2010 o Rio chamou 13 mil, <b>agora a meta já começa em 16 mil.</b></p>
+      </div>
+    </div>
+
+    <div class="pillars">
+      <div class="pil rv"><span class="icn"><svg><use href="#i-trend"/></svg></span><div><h4>16 mil policiais</h4><p>A <b>maior oportunidade de ingresso</b> na PMERJ dos últimos anos, com a meta de zerar o déficit.</p></div></div>
+      <div class="pil rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><h4>Último com nível médio</h4><p>Nos próximos editais, <b>o diploma de nível superior passa a ser exigido</b>. Esta é a última janela.</p></div></div>
+      <div class="pil rv d2"><span class="icn"><svg><use href="#i-users"/></svg></span><div><h4>Sem limite de idade</h4><p>Tem 18, 30 ou 45 anos? <b>A oportunidade é a mesma.</b> O limite foi declarado inconstitucional pelo TJRJ.</p></div></div>
+    </div>
+
+    <div class="src rv"><span>Fonte:</span><a href="https://diariodorio.com/politica/2026/10/11/douglas-ruas-anuncia-revisao-de-gastos-reforco-de-15-mil-pms-e-hospital-em-100-dias.html" target="_blank" rel="noopener" id="srcLink">veja a notícia sobre o reforço da PM</a></div>
+    <div class="center" style="margin-top:36px"><div class="cta-row rv"><a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero uma das 16 mil vagas</a></div></div>
+  </div>
+</section>
+
 <!-- ================= FOCUS ================= -->
-<section class="light pad focus">
+<section class="light pad focus notch" style="--prev:var(--navy)">
   <div class="wrap">
     <span class="pill rv"><i><svg><use href="#i-target"/></svg></i>Método de aprovação</span>
     <div class="focus-head">
