@@ -571,17 +571,25 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .cmp .arr{display:grid;place-items:center}
 .cmp .arr span{width:56px;height:56px;border-radius:50%;background:var(--grad-btn);display:grid;place-items:center;color:#0a1a3a;box-shadow:0 12px 30px -8px rgba(242,179,32,.6)}
 .cmp .arr svg{width:24px;height:24px}
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
-.pil{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--r);padding:24px;display:flex;gap:16px;align-items:flex-start}
-.pil .icn{flex:none;background:#0f2147;box-shadow:0 0 0 1px rgba(242,179,32,.4)}
-.pil h4{font-size:18px;letter-spacing:-.02em;margin-bottom:4px}
-.pil p{color:var(--gray);font-size:14.5px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+.pil{--c:#ffc21a;position:relative;overflow:hidden;border-radius:24px;padding:30px 26px 26px;background:linear-gradient(180deg,color-mix(in srgb,var(--c) 16%,#0c1c40) 0%,#0b1a3d 55%);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);box-shadow:0 30px 60px -30px color-mix(in srgb,var(--c) 55%,transparent),inset 0 1px 0 rgba(255,255,255,.08);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column}
+.pil:hover{transform:translateY(-8px);box-shadow:0 40px 70px -30px color-mix(in srgb,var(--c) 75%,transparent),inset 0 1px 0 rgba(255,255,255,.1)}
+.pil::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:var(--c)}
+.pil .wm{position:absolute;right:-6px;top:-18px;font-size:150px;font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--c);opacity:.07;pointer-events:none}
+.pil .pi{width:58px;height:58px;border-radius:18px;display:grid;place-items:center;background:var(--c);color:#0a1a3a;box-shadow:0 14px 30px -10px var(--c);margin-bottom:22px}
+.pil .pi svg{width:28px;height:28px}
+.pil .pbig{display:block;font-size:clamp(40px,4.4vw,56px);font-weight:800;letter-spacing:-.045em;line-height:.92;color:var(--c);text-transform:uppercase}
+.pil .sub2{display:block;font-size:clamp(19px,1.9vw,23px);font-weight:800;letter-spacing:-.02em;color:#fff;text-transform:uppercase;margin-top:6px}
+.pil hr{border:0;height:1px;background:rgba(255,255,255,.12);margin:20px 0 16px}
+.pil p{color:#c9d3ea;font-size:15px;line-height:1.5}
 .pil p b{color:#fff}
+.pil .lawsrc{align-self:flex-start}
+.pil.g{--c:#22c55e}.pil.y{--c:#ffc21a}.pil.r{--c:#ff4b4b}
 .lawsrc{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:#f7f4ec;color:#1b1b1b;border-radius:6px;padding:6px 10px 6px 6px;font-size:12px;font-weight:600;transform:rotate(-1deg);box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}
 .lawsrc span{background:#0b2a70;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
 .src{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--dim)}
 .src a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(242,179,32,.35)}
-@media (max-width:900px){.cmp{grid-template-columns:1fr}.cmp .arr span{transform:rotate(90deg)}.pillars{grid-template-columns:1fr}}
+@media (max-width:900px){.cmp{grid-template-columns:1fr}.cmp .arr span{transform:rotate(90deg)}.pillars{grid-template-columns:1fr}.pil{padding:26px 22px 22px}.pil .pbig{font-size:46px}}
 @media (max-width:600px){.cmpc{padding:22px}.cmpc .row2{grid-template-columns:1fr 1fr}}
 
 /* ---------- recorte de jornal ---------- */
@@ -806,9 +814,9 @@ fbq('track','PageView');
     </div>
 
     <div class="pillars">
-      <div class="pil rv"><span class="icn"><svg><use href="#i-trend"/></svg></span><div><h4>16 mil policiais</h4><p>A <b>maior oportunidade de ingresso</b> na PMERJ dos últimos anos, com a meta de zerar o déficit.</p></div></div>
-      <div class="pil rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><h4>Último com nível médio</h4><p>A Lei Orgânica Nacional das Polícias Militares passa a <b>exigir nível superior a partir de 2029</b>. Este é o último concurso de Soldado com Ensino Médio.</p><a class="lawsrc" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14751.htm" target="_blank" rel="noopener"><span>Fonte</span>Lei 14.751/2023 · Lei Orgânica Nacional das PMs</a></div></div>
-      <div class="pil rv d2"><span class="icn"><svg><use href="#i-users"/></svg></span><div><h4>Sem limite de idade</h4><p>Tem 18, 30 ou 45 anos? <b>A oportunidade é a mesma.</b> O limite foi declarado inconstitucional pelo TJRJ.</p></div></div>
+      <div class="pil g rv"><span class="wm">01</span><span class="pi"><svg><use href="#i-check"/></svg></span><span class="pbig">Sem limite</span><span class="sub2">de idade</span><hr><p>Tem 18, 30 ou 45 anos? <b>A chance é a mesma para todos.</b> O limite de 32 anos foi declarado inconstitucional pelo TJRJ.</p></div>
+      <div class="pil y rv d1"><span class="wm">02</span><span class="pi"><svg><use href="#i-trophy"/></svg></span><span class="pbig">Último</span><span class="sub2">com nível médio</span><hr><p>A partir de 2029, a lei passa a <b>exigir nível superior</b>. Este é o último concurso de Soldado com Ensino Médio.</p><a class="lawsrc" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14751.htm" target="_blank" rel="noopener"><span>Fonte</span>Lei 14.751/2023 · Lei Orgânica Nacional das PMs</a></div>
+      <div class="pil r rv d2"><span class="wm">03</span><span class="pi"><svg><use href="#i-users"/></svg></span><span class="pbig">16 mil</span><span class="sub2">policiais</span><hr><p>A <b>maior oportunidade de ingresso</b> na PMERJ dos últimos anos, com a meta de zerar o déficit da PM.</p></div>
     </div>
 
     <div class="press">
@@ -938,7 +946,7 @@ fbq('track','PageView');
     <div class="plat-bg" id="platBg"></div>
     <div class="stage rv">
       <div class="laptop">
-        <div class="screen"><video class="lv" data-src="img/videos/01.mp4" poster="img/videos/01.webp" width="560" height="336" muted loop playsinline preload="none" aria-label="Tour pela plataforma do Instituto Souto"></video></div>
+        <div class="screen"><video class="lv" data-src="video/01.mp4" poster="img/posters/01.webp" width="560" height="336" muted loop playsinline preload="none" aria-label="Tour pela plataforma do Instituto Souto"></video></div>
         <div class="base"></div>
       </div>
       <div class="rock"><img src="https://angradosreis.institutosouto.com.br/img/pedra.webp" alt="" loading="lazy"></div>
@@ -1214,7 +1222,7 @@ const DEPOIMENTOS = [
   {v:`${WP}/uploads/2025/11/videoplayback-3.mp4`, p:`${WP}/webp-express/webp-images/uploads/2025/11/Screenshot-2025-11-14-143244.png.webp`, n:"Depoimento 04"}
 ];
 
-/* Demonstrações da plataforma (img/videos) */
+/* Demonstrações da plataforma (video/ + capas em img/posters/) */
 const GIFS = [
   {f:"02.mp4", tag:"Planejamento", t:"Plano de Estudos", d:"Escolha seu modo de estudo e receba um cronograma personalizado de acordo com o seu tempo, nível e objetivos."},
   {f:"03.mp4", tag:"Questões", t:"Banco de Questões", d:"Questões com comentários dos professores, no padrão das bancas de segurança pública."},
@@ -1259,7 +1267,7 @@ idle(()=>{ $("#platBg").innerHTML = `<div class="row">${row(APROVADOS)}</div><di
 
 $("#gcards").innerHTML = GIFS.map((g,i)=>`
   <article class="gcard rv ${i%2?'d1':''} ${g.wide?'wide':''}">
-    <div class="gmedia"><video class="lv" data-src="img/videos/${g.f}" poster="img/videos/${g.f.replace('.mp4','.webp')}" width="560" height="336" muted loop playsinline preload="none" aria-label="${g.t}"></video><span class="live">DEMONSTRAÇÃO</span></div>
+    <div class="gmedia"><video class="lv" data-src="video/${g.f}" poster="img/posters/${g.f.replace('.mp4','.webp')}" width="560" height="336" muted loop playsinline preload="none" aria-label="${g.t}"></video><span class="live">DEMONSTRAÇÃO</span></div>
     <div class="gbody"><div class="gmeta"><span>${g.tag}</span><span>${String(i+1).padStart(2,"0")} / ${String(GIFS.length).padStart(2,"0")}</span></div><h3>${g.t}</h3><p>${g.d}</p></div>
   </article>`).join("");
 
