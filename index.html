@@ -504,6 +504,11 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .cmpc .one b{font-size:clamp(46px,5.6vw,72px);font-weight:800;letter-spacing:-.05em;line-height:.95}
 .cmpc p{color:#c9d3ea;font-size:14.5px;margin-top:16px}
 .cmpc p b{color:#fff}
+.gov{position:relative;border-radius:16px;overflow:hidden;margin-bottom:14px;aspect-ratio:16/8;background:#0f2147}
+.gov img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
+.gov::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,18,48,.92))}
+.gov figcaption{position:absolute;left:14px;bottom:12px;right:14px;z-index:2;font-size:12.5px;color:#c9d3ea;line-height:1.3}
+.gov figcaption b{display:block;color:#fff;font-size:15px}
 .cmp .arr{display:grid;place-items:center}
 .cmp .arr span{width:56px;height:56px;border-radius:50%;background:var(--grad-btn);display:grid;place-items:center;color:#0a1a3a;box-shadow:0 12px 30px -8px rgba(242,179,32,.6)}
 .cmp .arr svg{width:24px;height:24px}
@@ -532,7 +537,9 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .clip .tape{position:absolute;width:110px;height:30px;background:rgba(255,236,170,.75);top:-14px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
 .clip .tape.l{left:24px;transform:rotate(-6deg)}
 .clip .tape.r{right:24px;transform:rotate(5deg)}
-.clip .mast{display:flex;justify-content:space-between;align-items:baseline;border-bottom:3px double #1b1b1b;padding-bottom:8px;margin-bottom:16px;font-family:var(--font)}
+.clip .mast{display:flex;justify-content:center;align-items:center;background:#f2f2f2;margin:-30px -32px 18px;padding:14px 20px;border-bottom:3px solid #e3e3e3;border-radius:4px 4px 0 0}
+.clip .mast img{height:40px;width:auto}
+@media (max-width:900px){.clip .mast{margin:-26px -22px 16px}.clip .mast img{height:32px}}
 .clip .mast b{font-size:22px;font-weight:800;letter-spacing:-.02em;text-transform:lowercase}
 .clip .mast span{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7a2a1a}
 .clip h4{font-size:clamp(22px,2.4vw,30px);line-height:1.15;font-weight:700;margin-bottom:12px}
@@ -723,6 +730,7 @@ fbq('track','PageView');
       <div class="cmpc now rv d2">
         <span class="yr">// Próximo concurso</span>
         <h3>O que vem agora</h3>
+        <figure class="gov"><img src="img/douglas-ruas.webp" alt="Governador eleito do Rio de Janeiro, Douglas Ruas" width="806" height="452" loading="lazy" decoding="async"><figcaption><b>Douglas Ruas</b>Governador eleito do Rio de Janeiro</figcaption></figure>
         <div class="one"><small>Meta anunciada pelo governador</small><b class="g"><span data-count="16000" data-sep="1">0</span></b><small style="margin:6px 0 0">novos policiais para zerar o déficit da PM</small></div>
         <p>O governador eleito <b>Douglas Ruas</b> anunciou a recomposição do efetivo da PMERJ. Se em 2010 o Rio chamou 13 mil, <b>agora a meta já começa em 16 mil.</b></p>
       </div>
@@ -747,7 +755,7 @@ fbq('track','PageView');
       </div>
       <a class="clip rv d1" href="https://extra.globo.com/economia/servidor-publico/noticia/2025/10/tjrj-julga-inconstitucional-lei-que-estabelece-limite-de-idade-para-ingresso-na-pm-e-nos-bombeiros.ghtml" target="_blank" rel="noopener" aria-label="Ler a notícia completa no jornal Extra">
         <span class="tape l"></span><span class="tape r"></span>
-        <div class="mast"><b>extra</b><span>Servidor Público</span></div>
+        <div class="mast"><img src="img/extra-servidor-publico.webp" alt="Extra · Servidor Público" width="446" height="60" loading="lazy" decoding="async"></div>
         <h4>TJRJ julga inconstitucional lei que estabelece limite de idade para ingresso na PM e nos Bombeiros</h4>
         <div class="meta">Jornal Extra · outubro de 2025</div>
         <p>O Tribunal de Justiça do Rio derrubou a <mark>Lei 9.546/2022, que limitava em 32 anos</mark> a idade para entrar na Polícia Militar e no Corpo de Bombeiros do estado.</p>
@@ -811,11 +819,11 @@ fbq('track','PageView');
 <section class="light white pad appr notch" style="--prev:var(--paper)">
   <div class="wrap center head">
     <span class="eyebrow rv">// aprovados</span>
-    <h2 class="rv d1">Alunos que já <b class="g">vestiram a farda</b></h2>
-    <p class="lead rv d2" style="margin-top:16px">Alunos do Prof. Ismael Souto no dia em que conquistaram a aprovação. Com o método certo, o próximo pode ser você.</p>
+    <h2 class="rv d1">Alunos que já vestiram <b class="g">a farda da PMERJ</b></h2>
+    <p class="lead rv d2" style="margin-top:16px">Alunos do Prof. Ismael Souto aprovados na <b style="color:var(--pink)">Polícia Militar do Rio de Janeiro</b>. Com o método certo, o próximo soldado da PMERJ pode ser você.</p>
   </div>
   <div class="marq rv">
-    <div class="track" id="aprTrack"></div>
+    <div class="track" id="aprTrack" style="animation-duration:64s"></div>
   </div>
   <div class="center" style="margin-top:44px">
     <div class="cta-row rv"><a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero ser o próximo aprovado</a></div>
@@ -1105,7 +1113,8 @@ const APROVADOS_PM = ["Frame-1437253672-1-1-1","Frame-1437253672-1-1-1-1","Frame
   .map(n=>`https://institutosouto.com.br/wp-content/uploads/2026/03/${n}.webp`);
 const APROVADOS_GM = Array.from({length:24},(_,i)=>`https://institutosouto.com.br/wp-content/webp-express/webp-images/uploads/2026/09/Prancheta-${i+1}.png.webp`);
 /* intercala: 3 da GM, 1 da PM */
-const APROVADOS = []; { let p=0; APROVADOS_GM.forEach((g,i)=>{ APROVADOS.push(g); if(i%3===2 && p<APROVADOS_PM.length) APROVADOS.push(APROVADOS_PM[p++]); }); }
+/* página da PMERJ: carrossel só com aprovados da Polícia Militar (repetidos para preencher a faixa) */
+const APROVADOS = [...APROVADOS_PM,...APROVADOS_PM];
 
 /* Depoimentos em vídeo (hospedados no WordPress do Instituto Souto) */
 const WP = "https://institutosouto.com.br/wp-content";
