@@ -6,6 +6,19 @@
 <title>Preparatório PMERJ | Instituto Souto</title>
 <meta name="description" content="Último concurso da PMERJ com nível médio, sem limite de idade e R$ 7.644,60. Prepare-se no padrão FGV estudando 2 horas por dia com o Prof. Ismael Souto.">
 <meta name="theme-color" content="#061230">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://preparatoriopmerj.institutosouto.com.br/">
+<meta property="og:site_name" content="Instituto Souto">
+<meta property="og:title" content="Preparatório PMERJ | Prof. Ismael Souto">
+<meta property="og:description" content="Sem limite de idade · Último concurso com nível médio · Até 16 mil policiais. Prepare-se no padrão FGV estudando 2 horas por dia.">
+<meta property="og:image" content="https://preparatoriopmerj.institutosouto.com.br/img/og-pmerj.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Preparatório PMERJ | Prof. Ismael Souto">
+<meta name="twitter:description" content="Sem limite de idade · Último concurso com nível médio · Até 16 mil policiais.">
+<meta name="twitter:image" content="https://preparatoriopmerj.institutosouto.com.br/img/og-pmerj.jpg">
 <link rel="preconnect" href="https://angradosreis.institutosouto.com.br">
 <link rel="preconnect" href="https://institutosouto.com.br">
 <link rel="dns-prefetch" href="https://connect.facebook.net">
@@ -127,6 +140,16 @@ h1 .g,h2 .g{font-weight:800}
 .float.f2{right:5%;bottom:16%;animation-delay:-3s}
 @keyframes bob{50%{transform:translateY(-10px)}}
 
+/* ---------- selos do topo ---------- */
+.seals{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.seals span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.03em;line-height:1;box-shadow:0 10px 24px -12px rgba(0,0,0,.6)}
+.seals i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;background:rgba(255,255,255,.25)}
+.seal-g{background:#16a34a;color:#fff}
+.seal-y{background:var(--grad-btn);color:#0a1a3a}
+.seal-y i{background:rgba(10,26,58,.15)}
+.seal-r{background:#dc2626;color:#fff}
+@media (min-width:901px){.seals{flex-wrap:nowrap;width:max-content}}
+
 /* ---------- XBAND (ficha) ---------- */
 .xband{background:#071330;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;z-index:2}
 .xband .wrap{display:grid;grid-template-columns:repeat(6,1fr)}
@@ -165,6 +188,17 @@ h1 .g,h2 .g{font-weight:800}
 .fitc.yes li::before{background:var(--grad-btn);-webkit-mask:none}
 .fitc.yes li{position:relative}
 .fitc.yes li::after{content:"";position:absolute;left:5px;top:6px;width:12px;height:12px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12l5 5L20 7'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* ---------- VOCÊ SÓ PRECISA ESTUDAR ---------- */
+.easy{background:radial-gradient(900px 500px at 50% 0%,rgba(47,107,255,.2),transparent 60%),var(--navy)}
+.easy .head{max-width:760px;margin:0 auto 50px}
+.egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ecard{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:var(--r);padding:26px;transition:transform .3s,border-color .3s}
+.ecard:hover{transform:translateY(-6px);border-color:rgba(242,179,32,.45)}
+.ecard .icn{background:#0f2147;box-shadow:0 0 0 1px rgba(242,179,32,.4)}
+.ecard h3{font-size:19px;margin:18px 0 6px;letter-spacing:-.02em}
+.ecard p{color:var(--gray);font-size:15px}
+@media (max-width:900px){.egrid{grid-template-columns:1fr}}
 
 /* ---------- APROVADOS (teachers structure) ---------- */
 .appr .head{max-width:760px;margin:0 auto 46px}
@@ -504,7 +538,7 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .cmpc .one b{font-size:clamp(46px,5.6vw,72px);font-weight:800;letter-spacing:-.05em;line-height:.95}
 .cmpc p{color:#c9d3ea;font-size:14.5px;margin-top:16px}
 .cmpc p b{color:#fff}
-.gov{position:relative;border-radius:16px;overflow:hidden;margin-bottom:14px;aspect-ratio:16/8;background:#0f2147}
+.gov{position:relative;border-radius:16px;overflow:hidden;margin-bottom:14px;aspect-ratio:16/8.4;background:#0f2147}
 .gov img{width:100%;height:100%;object-fit:cover;object-position:50% 22%}
 .gov::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(6,18,48,.92))}
 .gov figcaption{position:absolute;left:14px;bottom:12px;right:14px;z-index:2;font-size:12.5px;color:#c9d3ea;line-height:1.3}
@@ -518,6 +552,8 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .pil h4{font-size:18px;letter-spacing:-.02em;margin-bottom:4px}
 .pil p{color:var(--gray);font-size:14.5px}
 .pil p b{color:#fff}
+.lawsrc{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:#f7f4ec;color:#1b1b1b;border-radius:6px;padding:6px 10px 6px 6px;font-size:12px;font-weight:600;transform:rotate(-1deg);box-shadow:0 8px 18px -10px rgba(0,0,0,.6)}
+.lawsrc span{background:#0b2a70;color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 7px;border-radius:4px}
 .src{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:26px;font-size:13px;color:var(--dim)}
 .src a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(242,179,32,.35)}
 @media (max-width:900px){.cmp{grid-template-columns:1fr}.cmp .arr span{transform:rotate(90deg)}.pillars{grid-template-columns:1fr}}
@@ -589,7 +625,9 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 }
 @media (max-width:600px){
   .topbar{font-size:12.5px;gap:8px}
-  .topbar .txt{display:none}
+  .topbar{padding:9px 12px;font-size:11.5px;line-height:1.35}
+  .topbar .tag,.topbar a{display:none}
+  .seals span{font-size:12px;padding:7px 12px 7px 7px}
   .xband .wrap{grid-template-columns:1fr 1fr}
   .xband .c{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
   .xband .c:nth-child(odd){border-left:0}
@@ -666,7 +704,7 @@ fbq('track','PageView');
 
 <div class="topbar">
   <span class="tag"><span class="dot"></span>URGENTE</span>
-  <span class="txt">Meta do governo: <b>até 16 mil policiais</b> · último concurso com nível médio</span>
+  <span class="txt">🚨 <b>SEM LIMITE DE IDADE</b> · <b>ÚLTIMO CONCURSO COM NÍVEL MÉDIO</b> · <b>ATÉ 16 MIL POLICIAIS</b></span>
   <a href="#oferta">Garantir minha vaga <svg width="13" height="13"><use href="#i-arrow"/></svg></a>
 </div>
 
@@ -677,13 +715,13 @@ fbq('track','PageView');
 
   <div class="wrap">
     <div class="hero-txt">
-      <div class="hchips">
-        <span><svg class="bdg"><use href="#badge"/></svg><b>PMERJ</b> · Rio de Janeiro</span>
-        <span>Nível Médio</span>
-        <span><img src="https://angradosreis.institutosouto.com.br/img/avatar-ismael.webp" alt="">@profismaelsouto</span>
+      <div class="seals">
+        <span class="seal-g"><i>✓</i>SEM LIMITE DE IDADE</span>
+        <span class="seal-y"><i>★</i>ÚLTIMO COM NÍVEL MÉDIO</span>
+        <span class="seal-r"><i>▲</i>ATÉ 16 MIL VAGAS</span>
       </div>
       <h1>Conquiste sua farda na <span class="g">Polícia Militar do RJ</span> estudando apenas 2 horas por dia</h1>
-      <p class="sub">A FGV reprovou 90% dos candidatos no último concurso. Esta é a sua <b>última chance de entrar na PMERJ com Ensino Médio</b>: <b>sem limite de idade</b> e <b>R$ 7.644,60</b> de remuneração + benefícios. Prepare-se com o método tático de quem foi <b>aprovado para Oficial e Soldado da PM</b>.</p>
+      <p class="sub"><b>Sem limite de idade e com Ensino Médio</b>: esta é a sua última chance de entrar na PMERJ, com <b>R$ 7.644,60</b> de remuneração + benefícios. Prepare-se com o método tático de quem foi <b>aprovado para Oficial e Soldado da PM</b>.</p>
       <div class="cta-row">
         <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga na PMERJ</a>
       </div>
@@ -704,7 +742,7 @@ fbq('track','PageView');
     <div class="c"><small>Escolaridade</small><strong>Nível médio</strong></div>
     <div class="c"><small>Idade máxima</small><strong>Sem limite</strong></div>
     <div class="c"><small>Meta do governo</small><strong>16 mil policiais</strong></div>
-    <div class="c hot"><small>Vagas</small><strong>4.000 vagas</strong></div>
+    <div class="c hot"><small>Previstas no edital</small><strong>4.000 vagas</strong></div>
   </div>
 </div>
 
@@ -721,24 +759,24 @@ fbq('track','PageView');
         <span class="yr">// Concurso de 2010</span>
         <h3>O que já aconteceu</h3>
         <div class="row2">
-          <div class="box"><small>Vagas no edital</small><b><span data-count="3600" data-sep="1">0</span></b></div>
-          <div class="box hl"><small>Policiais chamados</small><b>+<span data-count="13000" data-sep="1">0</span></b></div>
+          <div class="box"><small>Vagas no edital</small><b><span data-count="3600" data-sep="1">3.600</span></b></div>
+          <div class="box hl"><small>Policiais chamados</small><b>+<span data-count="13000" data-sep="1">13.000</span></b></div>
         </div>
         <p>O edital abriu <b>3.600 vagas</b> de soldado. Com as ampliações dos anos seguintes, foram chamados <b>mais de 13 mil</b>, quase 4 vezes o previsto.</p>
       </div>
       <div class="arr rv d1" aria-hidden="true"><span><svg><use href="#i-arrow"/></svg></span></div>
       <div class="cmpc now rv d2">
-        <span class="yr">// Próximo concurso</span>
-        <h3>O que vem agora</h3>
-        <figure class="gov"><img src="img/douglas-ruas.webp" alt="Governador eleito do Rio de Janeiro, Douglas Ruas" width="806" height="452" loading="lazy" decoding="async"><figcaption><b>Douglas Ruas</b>Governador eleito do Rio de Janeiro</figcaption></figure>
-        <div class="one"><small>Meta anunciada pelo governador</small><b class="g"><span data-count="16000" data-sep="1">0</span></b><small style="margin:6px 0 0">novos policiais para zerar o déficit da PM</small></div>
-        <p>O governador eleito <b>Douglas Ruas</b> anunciou a recomposição do efetivo da PMERJ. Se em 2010 o Rio chamou 13 mil, <b>agora a meta já começa em 16 mil.</b></p>
+        <span class="yr">// O que vem agora</span>
+        <h3>Governador anuncia novo concurso em janeiro de 2027</h3>
+        <figure class="gov"><img src="img/douglas-ruas.webp" alt="Governador eleito do Rio de Janeiro, Douglas Ruas" width="806" height="452" loading="lazy" decoding="async"><figcaption><b>Governador eleito Douglas Ruas</b>anuncia meta de até 16 mil novos policiais para zerar o déficit da PM</figcaption></figure>
+        <div class="one"><small>Meta anunciada pelo governador</small><b class="g"><span data-count="16000" data-sep="1">16.000</span></b><small style="margin:6px 0 0">novos policiais para zerar o déficit da PM</small></div>
+        <p>O governador eleito <b>Douglas Ruas</b> anunciou que irá <b>convocar 16 mil policiais militares</b> para acabar com o déficit de policiais militares e ajudar a combater o crime organizado.</p>
       </div>
     </div>
 
     <div class="pillars">
       <div class="pil rv"><span class="icn"><svg><use href="#i-trend"/></svg></span><div><h4>16 mil policiais</h4><p>A <b>maior oportunidade de ingresso</b> na PMERJ dos últimos anos, com a meta de zerar o déficit.</p></div></div>
-      <div class="pil rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><h4>Último com nível médio</h4><p>Nos próximos editais, <b>o diploma de nível superior passa a ser exigido</b>. Esta é a última janela.</p></div></div>
+      <div class="pil rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><h4>Último com nível médio</h4><p>A Lei Orgânica Nacional das Polícias Militares passa a <b>exigir nível superior a partir de 2029</b>. Este é o último concurso de Soldado com Ensino Médio.</p><a class="lawsrc" href="https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14751.htm" target="_blank" rel="noopener"><span>Fonte</span>Lei 14.751/2023 · Lei Orgânica Nacional das PMs</a></div></div>
       <div class="pil rv d2"><span class="icn"><svg><use href="#i-users"/></svg></span><div><h4>Sem limite de idade</h4><p>Tem 18, 30 ou 45 anos? <b>A oportunidade é a mesma.</b> O limite foi declarado inconstitucional pelo TJRJ.</p></div></div>
     </div>
 
@@ -786,7 +824,7 @@ fbq('track','PageView');
     </div>
     <div class="center" style="margin-top:44px">
       <div class="cta-row rv"><a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero começar minha preparação</a></div>
-      <div class="mstats rv d1"><span><svg><use href="#i-play"/></svg><b>8</b> recursos</span><span><svg><use href="#i-bolt"/></svg><b>2h</b> por dia</span><span><svg><use href="#i-lock"/></svg><b>1</b> plataforma</span></div>
+      <div class="mstats rv d1"><span><svg><use href="#i-play"/></svg><b>11</b> recursos</span><span><svg><use href="#i-bolt"/></svg><b>2h</b> por dia</span><span><svg><use href="#i-lock"/></svg><b>1</b> plataforma</span></div>
     </div>
 
     <div class="fit">
@@ -815,8 +853,27 @@ fbq('track','PageView');
   </div>
 </section>
 
+<!-- ================= VOCÊ SÓ PRECISA ESTUDAR ================= -->
+<section class="easy pad notch" style="--prev:var(--paper)">
+  <div class="wrap center head">
+    <span class="eyebrow rv">// você só precisa estudar</span>
+    <h2 class="rv d1">Você não vai se preocupar com nada. <b class="g">A gente organiza tudo por você.</b></h2>
+  </div>
+  <div class="wrap">
+    <div class="egrid">
+      <div class="ecard rv"><span class="icn"><svg><use href="#i-cal"/></svg></span><h3>Seu plano pronto em minutos</h3><p>Você informa quantas horas tem por dia e a plataforma monta um plano de estudos que cabe na sua rotina.</p></div>
+      <div class="ecard rv d1"><span class="icn"><svg><use href="#i-play"/></svg></span><h3>Aulas teóricas e de exercícios</h3><p>Primeiro você aprende, depois resolve questões junto com o professor.</p></div>
+      <div class="ecard rv d2"><span class="icn"><svg><use href="#i-list"/></svg></span><h3>Lista de questões ao fim de cada aula</h3><p>Questões selecionadas pelos professores para você treinar aquele assunto até dominar.</p></div>
+      <div class="ecard rv"><span class="icn"><svg><use href="#i-target"/></svg></span><h3>Banco de questões padrão FGV</h3><p>Banco de questões próprio para treinar quanto quiser, no estilo da banca.</p></div>
+      <div class="ecard rv d1"><span class="icn"><svg><use href="#i-trend"/></svg></span><h3>Simulados</h3><p>Meça sua evolução e chegue na prova acostumado ao ritmo da FGV.</p></div>
+      <div class="ecard rv d2"><span class="icn"><svg><use href="#i-pen"/></svg></span><h3>Redação com correção individualizada</h3><p>Você recebe uma lista de temas, escreve e um professor corrige o seu texto, apontando o que melhorar.</p></div>
+    </div>
+    <div class="center" style="margin-top:44px"><div class="cta-row rv"><a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero começar minha preparação</a></div></div>
+  </div>
+</section>
+
 <!-- ================= APROVADOS ================= -->
-<section class="light white pad appr notch" style="--prev:var(--paper)">
+<section class="light white pad appr notch" style="--prev:var(--navy)">
   <div class="wrap center head">
     <span class="eyebrow rv">// aprovados</span>
     <h2 class="rv d1">Alunos que já vestiram <b class="g">a farda da PMERJ</b></h2>
@@ -921,8 +978,8 @@ fbq('track','PageView');
       <div class="ocard rv"><span class="icn"><svg><use href="#i-shield"/></svg></span><div><small>Cargo</small><h3>Soldado da Polícia Militar</h3><p>Último concurso com nível médio e sem limite de idade: a lei que trazia o limite foi declarada inconstitucional pelo TJRJ.</p></div></div>
       <div class="ocard rv d1"><span class="icn"><svg><use href="#i-pen"/></svg></span><div><small>Banca</small><h3>FGV</h3><p>A FGV assumiu o Concurso de Oficiais (CFO). Historicamente, o edital de Soldado é publicado logo no vácuo de Oficial.</p></div></div>
       <div class="salary rv d2">
-        <div class="v"><sup>R$</sup><span data-count="7644.60" data-dec="2">0</span><small>remuneração + benefícios</small></div>
-        <p>Ano eleitoral <b>não trava a segurança pública</b>: a legislação permite concursos e nomeações normalmente. Quem parar de estudar por política vai ver o concorrente vestir a farda.</p>
+        <div class="v"><sup>R$</sup><span data-count="7644.60" data-dec="2">7.644,60</span><small>remuneração + benefícios</small></div>
+        <p>Com a posse do novo governador em janeiro, <b>a Segurança Pública vira prioridade</b> e o novo concurso para chamar <b>16 mil policiais militares</b> já foi anunciado. Sua única chance de ser aprovado é começar agora.</p>
       </div>
     </div>
 
@@ -931,7 +988,7 @@ fbq('track','PageView');
       <div class="dtabs"><span class="on">Visão geral</span><span>Disciplinas</span><span>Metas</span></div>
       <div class="drow">
         <div class="dbox"><small><span>Simulado #3</span></small>
-          <div class="ring"><svg viewBox="0 0 100 100" width="96" height="96"><circle cx="50" cy="50" r="42" stroke="#1a2c55" stroke-width="10" fill="none"/><circle id="ringc" cx="50" cy="50" r="42" stroke="url(#rg)" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="264" style="transition:stroke-dashoffset 1.6s cubic-bezier(.2,.8,.2,1)"/><defs><linearGradient id="rg"><stop offset="0" stop-color="#ffe58a"/><stop offset="1" stop-color="#d99a06"/></linearGradient></defs></svg><b><span data-count="84">0</span>%</b></div>
+          <div class="ring"><svg viewBox="0 0 100 100" width="96" height="96"><circle cx="50" cy="50" r="42" stroke="#1a2c55" stroke-width="10" fill="none"/><circle id="ringc" cx="50" cy="50" r="42" stroke="url(#rg)" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="264" style="transition:stroke-dashoffset 1.6s cubic-bezier(.2,.8,.2,1)"/><defs><linearGradient id="rg"><stop offset="0" stop-color="#ffe58a"/><stop offset="1" stop-color="#d99a06"/></linearGradient></defs></svg><b><span data-count="84">84</span>%</b></div>
           <div class="up">▲ 12% vs. anterior</div>
         </div>
         <div class="dbox"><small><span>Dias de estudo</span><span style="color:var(--orange)">🔥 7 seguidos</span></small>
@@ -939,9 +996,9 @@ fbq('track','PageView');
           <div class="days"><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span><span>D</span></div>
         </div>
       </div>
-      <div class="dline"><span class="di"><svg><use href="#i-list"/></svg></span><span>Questões resolvidas<small>Padrão FGV · desempenho em alta</small></span><b data-count="1248">0</b></div>
-      <div class="dline"><span class="di"><svg><use href="#i-check"/></svg></span><span>Revisões em dia<small>Nenhuma atrasada</small></span><b data-count="36">0</b></div>
-      <div class="dbox evo"><small><span>Evolução no edital</span><span style="color:#fff;font-size:14px"><span data-count="72">0</span>%</span></small>
+      <div class="dline"><span class="di"><svg><use href="#i-list"/></svg></span><span>Questões resolvidas<small>Padrão FGV · desempenho em alta</small></span><b data-count="1248">1.248</b></div>
+      <div class="dline"><span class="di"><svg><use href="#i-check"/></svg></span><span>Revisões em dia<small>Nenhuma atrasada</small></span><b data-count="36">36</b></div>
+      <div class="dbox evo"><small><span>Evolução no edital</span><span style="color:#fff;font-size:14px"><span data-count="72">72</span>%</span></small>
         <div class="eb"><i data-w="72"></i></div>
         <div class="legend"><span style="--c:#ffd45a">Português</span><span style="--c:#6ea0ff">Matemática</span><span style="--c:#2f6bff">Legislação PMERJ</span></div>
       </div>
@@ -964,24 +1021,24 @@ fbq('track','PageView');
     <div>
       <span class="eyebrow rv">// tudo o que você terá acesso</span>
       <h2 class="rv d1" style="font-size:clamp(28px,3.4vw,40px)">O que você vai receber:</h2>
-      <div class="counts rv d2"><span><b>8</b> recursos</span><span><b>Mentoria</b> de estudos</span><span><b>1</b> plataforma</span></div>
+      <div class="counts rv d2"><span><b>11</b> recursos</span><span><b>Mentoria</b> de estudos</span><span><b>1</b> plataforma</span></div>
       <div class="groups">
         <div class="grp rv"><div class="gh"><span class="icn"><svg><use href="#i-play"/></svg></span><h3>Curso completo<small>2 itens</small></h3></div>
-          <ul><li><span>Curso Completo PMERJ (teoria + exercícios)</span><s>R$ 1.497</s></li><li><span>Hackeando a Banca FGV</span><s>R$ 497</s></li></ul></div>
-        <div class="grp rv d1"><div class="gh"><span class="icn"><svg><use href="#i-pen"/></svg></span><h3>Prática para a prova<small>1 item</small></h3></div>
-          <ul><li><span>Banco de Questões Próprio</span><s>R$ 297</s></li></ul></div>
+          <ul><li><span>Curso Completo PMERJ (teoria + exercícios)</span><s>R$ 427</s></li><li><span>Hackeando a Banca FGV</span><s>R$ 147</s></li></ul></div>
+        <div class="grp rv d1"><div class="gh"><span class="icn"><svg><use href="#i-pen"/></svg></span><h3>Prática para a prova<small>3 itens</small></h3></div>
+          <ul><li><span>Banco de Questões Próprio</span><s>R$ 147</s></li><li><span>Simulados</span><s>R$ 147</s></li><li><span>Listas de questões selecionadas ao fim de cada aula</span><s>R$ 97</s></li></ul></div>
         <div class="grp rv d2"><div class="gh"><span class="icn"><svg><use href="#i-cal"/></svg></span><h3>Organização e revisão<small>4 itens</small></h3></div>
-          <ul><li><span>Plano de Estudos Individualizado</span><s>R$ 397</s></li><li><span>Super Cronograma IA</span><s>R$ 297</s></li><li><span>Flashcards</span><s>R$ 197</s></li><li><span>Mapas Mentais</span><s>R$ 197</s></li></ul></div>
-        <div class="grp rv d3"><div class="gh"><span class="icn"><svg><use href="#i-users"/></svg></span><h3>Acompanhamento<small>3 itens</small></h3></div>
-          <ul><li><span>Mentoria de estudos</span><s>R$ 1.997</s></li><li><span>Suporte tira-dúvidas com professores</span></li><li><span>Garantia de atualização pós-edital</span></li></ul></div>
+          <ul><li><span>Plano de Estudos Individualizado</span><s>R$ 147</s></li><li><span>Super Cronograma IA</span><s>R$ 97</s></li><li><span>Flashcards</span><s>R$ 97</s></li><li><span>Mapas Mentais</span><s>R$ 97</s></li></ul></div>
+        <div class="grp rv d3"><div class="gh"><span class="icn"><svg><use href="#i-users"/></svg></span><h3>Acompanhamento<small>4 itens</small></h3></div>
+          <ul><li><span>Mentoria de estudos</span><s>R$ 297</s></li><li><span>Temas de redação + correção individualizada</span><s>R$ 297</s></li><li><span>Suporte tira-dúvidas com professores</span></li><li><span>Garantia de atualização pós-edital</span></li></ul></div>
       </div>
-      <p class="notfull rv">Mas você não vai pagar R$ 5.376!</p>
+      <p class="notfull rv">Mas você não vai pagar R$ 1.997!</p>
     </div>
 
     <div class="price rv d1">
       <div class="pbrand"><svg><use href="#badge"/></svg>Instituto Souto</div>
-      <span class="ptag">ACESSO COMPLETO · -92%</span>
-      <div class="ptotal"><span>Valor total</span><s>R$ 5.376,00</s></div>
+      <span class="ptag">ACESSO COMPLETO · -80%</span>
+      <div class="ptotal"><span>Valor total</span><s>R$ 1.997,00</s></div>
       <div class="pval"><sup>R$</sup>397</div>
       <div class="psub">à vista</div>
       <div class="psub2">ou <b style="color:#fff">12x de R$ 41,70</b> no cartão</div>
@@ -989,6 +1046,7 @@ fbq('track','PageView');
         <li><svg><use href="#i-check"/></svg>Acesso completo ao Preparatório PMERJ por 1 ano</li>
         <li><svg><use href="#i-check"/></svg>Mentoria de estudos com suporte direto</li>
         <li><svg><use href="#i-check"/></svg>Questões, flashcards e mapas mentais</li>
+        <li><svg><use href="#i-check"/></svg>Simulados e correção individualizada de redação</li>
         <li><svg><use href="#i-check"/></svg>Atualização gratuita pós-edital</li>
       </ul>
       <p class="pproof"><b>+4.000 alunos</b> aprovados com o Prof. Ismael!</p>
@@ -1032,9 +1090,9 @@ fbq('track','PageView');
       </ul>
       <blockquote class="rv">“O meu compromisso não é te vender teoria acadêmica. É te entregar a estratégia exata que me fez vestir a farda e que já aprovou muitos alunos.”</blockquote>
       <div class="anum rv">
-        <div><b>+<span data-count="4000" data-sep="1">0</span></b><span>alunos aprovados</span></div>
-        <div><b data-count="4">0</b><span>aprovações militares</span></div>
-        <div><b data-count="8">0</b><span>recursos no preparatório</span></div>
+        <div><b>+<span data-count="4000" data-sep="1">4.000</span></b><span>alunos aprovados</span></div>
+        <div><b data-count="4">4</b><span>aprovações militares</span></div>
+        <div><b data-count="11">11</b><span>recursos no preparatório</span></div>
       </div>
       <a class="ig rv" href="https://instagram.com/profismaelsouto" target="_blank" rel="noopener"><svg><use href="#i-ig"/></svg><span><b>@profismaelsouto</b> · siga para não perder nenhuma atualização da PMERJ</span></a>
     </div>
@@ -1058,7 +1116,7 @@ fbq('track','PageView');
       <details class="rv" open><summary>O curso é completo mesmo? Inclui Matemática e Redação?</summary><p>Sim! O preparatório contempla 100% das disciplinas cobradas, com módulos especiais de Matemática ensinada do zero e Oficina de Redação prática no padrão da banca.</p></details>
       <details class="rv"><summary>Qual é a banca do concurso?</summary><p>A FGV, que assumiu o Concurso de Oficiais (CFO). Historicamente, o edital de Soldado é publicado logo no vácuo de Oficial.</p></details>
       <details class="rv"><summary>Posso fazer a prova se eu tiver mais de 30 anos?</summary><p>Sim! O concurso da PMERJ está confirmado <b>sem limite de idade</b>. Esta é a melhor oportunidade para realizar o sonho da farda.</p></details>
-      <details class="rv"><summary>Preciso de curso superior para este edital?</summary><p>Não. Este será o <b>último concurso exigindo apenas o Ensino Médio</b>. Nos próximos, a exigência passará a ser Nível Superior.</p></details>
+      <details class="rv"><summary>Preciso de curso superior para este edital?</summary><p>Não. Este será o <b>último concurso de Soldado exigindo apenas o Ensino Médio</b>. A Lei Orgânica Nacional das Polícias Militares (Lei 14.751/2023) passa a exigir nível superior a partir de 2029.</p></details>
       <details class="rv"><summary>O acesso ao preparatório é imediato?</summary><p>Sim. Assim que o pagamento é confirmado, você recebe o acesso e já pode começar.</p></details>
       <details class="rv"><summary>E se o edital mudar o conteúdo?</summary><p>Não precisa comprar outro curso. Com a <b>Garantia de Atualização Pós-Edital</b>, qualquer mudança de conteúdo entra na sua área de membros de forma 100% gratuita.</p></details>
       <details class="rv"><summary>Tenho dúvidas durante as aulas, onde pergunto?</summary><p>Você tem acesso ao suporte exclusivo para alunos dentro da plataforma. Suas dúvidas sobre aulas e questões são respondidas pela equipe de professores.</p></details>
@@ -1083,7 +1141,7 @@ fbq('track','PageView');
 
     <div class="tools rv">
       <h3>Tudo o que você precisa para estudar com estratégia</h3>
-      <div class="tchips"><span>Videoaulas</span><span>Teoria e exercícios</span><span>Matemática do zero</span><span>Banco de questões</span><span>Flashcards</span><span>Mapas mentais</span><span>Cronograma IA</span><span>Mentoria de estudos</span><span>Oficina de Redação</span><span>Acesso pelo celular</span><span>Raio-X FGV</span></div>
+      <div class="tchips"><span>Videoaulas</span><span>Teoria e exercícios</span><span>Matemática do zero</span><span>Banco de questões</span><span>Simulados</span><span>Correção de redação</span><span>Flashcards</span><span>Mapas mentais</span><span>Cronograma IA</span><span>Mentoria de estudos</span><span>Oficina de Redação</span><span>Acesso pelo celular</span><span>Raio-X FGV</span></div>
     </div>
 
     <p class="big rv">O próximo Soldado<br>da PMERJ <span class="g">pode ser você.</span></p>
@@ -1153,7 +1211,7 @@ const TOASTS = [
   ["R$","Remuneração de <b>R$ 7.644,60</b>"],
   ["✓","<b>Acesso imediato</b> à plataforma"],
   ["7","<b>Garantia de 7 dias</b> sem enrolação"],
-  ["%","De R$ 5.376 por apenas <b>R$ 397</b>"],
+  ["%","De R$ 1.997 por apenas <b>R$ 397</b>"],
   ["!","Meta de até <b>16 mil policiais</b>"]
 ];
 
@@ -1216,9 +1274,14 @@ const count = el=>{
   const to=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), t0=performance.now(), dur=1600;
   const step = t=>{ const p=Math.min((t-t0)/dur,1), e=1-Math.pow(1-p,3); el.textContent = fmt(to*e,dec); if(p<1) requestAnimationFrame(step); };
   requestAnimationFrame(step);
+  setTimeout(()=>{ el.textContent = fmt(to,dec); }, dur+400); /* garantia: termina sempre no número final */
 };
-const cio = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.4});
-$$("[data-count]").forEach(el=>cio.observe(el));
+/* o HTML já traz o número final; só anima se o navegador suportar e o usuário não pediu menos movimento */
+const canAnim = "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches;
+if(canAnim){
+  const cio = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);cio.unobserve(e.target)}}),{threshold:.4});
+  $$("[data-count]").forEach(el=>{ const r=el.getBoundingClientRect(); if(r.top>innerHeight){ el.textContent="0"; cio.observe(el); } });
+}
 
 /* dashboard */
 new IntersectionObserver((es,o)=>es.forEach(e=>{ if(!e.isIntersecting) return;
