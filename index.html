@@ -476,12 +476,15 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
 .fbot a:hover{color:var(--gold)}
 
 /* ---------- sticky / wa / toasts ---------- */
-.sticky{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);z-index:60;display:flex;align-items:center;gap:16px;background:rgba(8,20,48,.88);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 7px 7px 20px;box-shadow:0 20px 50px -14px rgba(0,0,0,.8);transition:transform .5s cubic-bezier(.2,.8,.2,1);width:max-content;max-width:calc(100% - 32px)}
+.sticky{position:fixed;left:50%;bottom:16px;transform:translate(-50%,140%);z-index:60;display:flex;align-items:center;gap:16px;background:rgba(8,20,48,.88);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:7px 7px 7px 20px;box-shadow:0 20px 50px -14px rgba(0,0,0,.8);transition:transform .5s cubic-bezier(.2,.8,.2,1);width:max-content;max-width:calc(100% - 100px)}
 .sticky.show{transform:translate(-50%,0)}
 .sticky .si{font-size:13px;color:var(--gray);line-height:1.25}
 .sticky .si b{color:#fff;display:block;font-size:14px}
 .sticky .btn{padding:6px 18px 6px 6px;font-size:14px}
 .sticky .btn .ic{width:34px;height:34px}
+.wafloat{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25d366;display:grid;place-items:center;z-index:61;box-shadow:0 12px 30px -8px rgba(37,211,102,.6);transition:transform .3s}
+.wafloat:hover{transform:scale(1.08)}
+.wafloat svg{width:28px;height:28px;color:#fff}
 #toasts{position:fixed;left:16px;bottom:18px;z-index:59;pointer-events:none}
 .toast{display:flex;gap:10px;align-items:center;background:rgba(8,20,48,.92);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:10px 14px 10px 10px;font-size:13px;color:#d3d5dc;max-width:290px;transform:translateY(20px);opacity:0;transition:all .5s}
 .toast.show{transform:none;opacity:1}
@@ -670,7 +673,7 @@ details p{padding:0 22px 20px;color:var(--pmut);font-size:15px}
   .hstats{gap:20px}
   .hchips{font-size:11.5px}
   .hchips>span:nth-child(3){display:none}
-  .sticky{left:12px;right:12px;transform:translateY(140%);width:auto;max-width:none;justify-content:space-between}
+  .sticky{left:12px;right:84px;transform:translateY(140%);width:auto;max-width:none;justify-content:space-between}
   .sticky.show{transform:none}
   .sticky .si{display:none}
   .sticky .btn{width:100%;justify-content:center}
@@ -1073,11 +1076,11 @@ fbq('track','PageView');
 
     <div class="price rv d1">
       <div class="pbrand"><svg><use href="#badge"/></svg>Instituto Souto</div>
-      <span class="ptag">ACESSO COMPLETO · -85%</span>
+      <span class="ptag">ACESSO COMPLETO · -80%</span>
       <div class="ptotal"><span>Valor total</span><s>R$ 1.997,00</s></div>
-      <div class="pval"><sup>R$</sup>297</div>
+      <div class="pval"><sup>R$</sup>397</div>
       <div class="psub">à vista</div>
-      <div class="psub2">ou <b style="color:#fff">parcelado no cartão</b></div>
+      <div class="psub2">ou <b style="color:#fff">12x de R$ 41,70</b> no cartão</div>
       <ul class="plist">
         <li><svg><use href="#i-check"/></svg>Acesso completo ao Preparatório PMERJ por 1 ano</li>
         <li><svg><use href="#i-check"/></svg>Mentoria de estudos com suporte direto</li>
@@ -1170,7 +1173,7 @@ fbq('track','PageView');
     <h2 class="rv d1">Pronto para conquistar <b class="g">sua farda na PMERJ?</b></h2>
     <p class="lead rv d2" style="margin:0 auto 32px">Comece hoje sua rotina de estudos com o Preparatório PMERJ e chegue no edital à frente da concorrência.</p>
     <div class="cta-row rv d3">
-      <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga por R$ 297</a>
+      <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga por R$ 397</a>
       <a class="btn wa js-wa" href="#"><span class="ic"><svg><use href="#i-wa"/></svg></span>Falar no WhatsApp</a>
     </div>
     <p class="note rv">Caso tenha qualquer dúvida, nossa equipe estará à disposição para ajudar.</p>
@@ -1191,9 +1194,10 @@ fbq('track','PageView');
 </footer>
 
 <div class="sticky" id="sticky">
-  <span class="si"><b>Preparatório PMERJ</b>Acesso completo por R$ 297</span>
-  <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga · R$ 297</a>
+  <span class="si"><b>Preparatório PMERJ</b>Acesso completo por R$ 397</span>
+  <a class="btn" href="#oferta"><span class="ic"><svg><use href="#i-shield"/></svg></span>Quero minha vaga · R$ 397</a>
 </div>
+<a class="wafloat js-wa" href="#" aria-label="Falar no WhatsApp"><svg><use href="#i-wa"/></svg></a>
 <div id="toasts"></div>
 
 <script>
@@ -1246,7 +1250,7 @@ const TOASTS = [
   ["R$","Remuneração de <b>R$ 7.644,60</b>"],
   ["✓","<b>Acesso imediato</b> à plataforma"],
   ["7","<b>Garantia de 7 dias</b> sem enrolação"],
-  ["%","De R$ 1.997 por apenas <b>R$ 297</b>"],
+  ["%","De R$ 1.997 por apenas <b>R$ 397</b>"],
   ["!","Meta de até <b>16 mil policiais</b>"]
 ];
 
